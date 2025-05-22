@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Table, Modal, Form, Select } from 'antd';
+import { Button, Table, Modal, Form, Input, InputNumber, Select } from 'antd';
 import axios from 'axios';
 
 const ClassroomList = () => {
@@ -97,7 +97,7 @@ const ClassroomList = () => {
           }}>
             Editar
           </Button>
-          <Button type="danger" onClick={() => showDeleteConfirm(record)}>
+          <Button type="danger" onClick={() => showDeleteConfirm(record)} style={{ marginLeft: '8px' }}>
             Eliminar
           </Button>
         </>
@@ -111,7 +111,7 @@ const ClassroomList = () => {
         setSelectedClassroom(null);
         form.resetFields();
         setModalVisible(true);
-      }}>
+      }} style={{ marginBottom: '16px' }}>
         Nuevo Aula
       </Button>
 
